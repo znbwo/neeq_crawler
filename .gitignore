@@ -1,0 +1,5 @@
+/.idea/*
+# Created by .ignore support plugin (hsz.mobi)
+/neeq_crawler.iml
+/target
+*.DS_Store

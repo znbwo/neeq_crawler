@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.neeq.crawler.consumer.companyInfo.CompanyInfoMapper">
+
+    <!--<insert id="insert_company_baseinfo" parameterType="com.neeq.crawler.consumer.companyInfo.bean.Company_baseinfo">-->
+    <!--insert into neeq_company ()-->
+    <!--values (#{})-->
+    <!--</insert>-->
+    <select id="selectIndustryCode" parameterType="string" resultType="int">
+        select id from neeq_industry_category where name = #{industry};
+    </select>
+
+    <select id="selectBrokerCode" parameterType="string" resultType="int">
+        select id from neeq_special where name = #{broker};
+    </select>
+</mapper>
